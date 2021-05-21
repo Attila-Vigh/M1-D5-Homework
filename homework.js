@@ -66,7 +66,6 @@ const testExercise3 = () => {
     console.log(crazyDiff(40));  // => 63
     console.log(crazyDiff(100)); // => 243
 }
-testExercise3()
 
 /* EXERCISE 4
     Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
@@ -154,6 +153,23 @@ const testExercise7 = () => {
     Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
+
+const upperFirst = ( string ) => {
+    
+    const words = string.split(" "); // split the string into an array
+    /**
+     * 1. get the words one by one form the array 
+     * 2. this the help of the index i parameter the word is grabbed form the array redeclared 
+     * 3. by adding the first letter capitalized of the word current word 
+     * 3. the same word starting from the scond letter 
+     */
+    words.forEach(( word, i ) => words[i] = word[0].toUpperCase() + word.slice(1))
+    
+    string = words.join(" "); // the array is tranformed into a string wiht space between words
+
+    return string
+}
+
 const testExercise8 = () => {
 
     console.log(upperFirst('Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.')); //=>
@@ -211,7 +227,7 @@ const testAllExercise = () => {
     // testExercise5()
     // testExercise6()
     // testExercise7()
-    // testExercise8()
+    testExercise8()
     // testExercise9()
     // testExercise10()
 };
