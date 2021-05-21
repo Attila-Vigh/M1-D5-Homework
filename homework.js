@@ -54,25 +54,35 @@ const testExercise3 = () => {
     console.log(crazyDiff(343));
 }
 
-const testAllExercise = () => {
-
-    // testExercise1()
-    // testExercise2()
-    testExercise3()
-    // testExercise4()
-    // testExercise5()
-    // testExercise6()
-    // testExercise7()
-    // testExercise8()
-    // testExercise9()
-    // testExercise10()
-};testAllExercise()
-
 /* EXERCISE 4
     Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
 
+const boundary = num => ( 
+    num ===  400 || num >= 20 && num <= 100 
+        ? true 
+        : false
+)
 
+const testExercise4 = () => {
+
+    console.log(boundary(-19)); //=> false
+    console.log(boundary(0));   //=> false
+    console.log(boundary(19));  //=> false
+    console.log(boundary(20));  //=> true
+    console.log(boundary(21));  //=> true
+    console.log(boundary(65));  //=> true
+    console.log(boundary(99));  //=> true
+    console.log(boundary(100)); //=> true
+    console.log(boundary(101)); //=> false
+    console.log(boundary(254)); //=> false
+    console.log(boundary(343)); //=> false
+    console.log(boundary(399)); //=> false
+    console.log(boundary(400)); //=> true
+    console.log(boundary(401)); //=> false
+    console.log(boundary(543)); //=> false
+    console.log(boundary(545357)); //=> false
+}
 
 /* EXERCISE 5
     Write a function "strivify" which accepts a string.
