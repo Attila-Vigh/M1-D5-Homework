@@ -95,7 +95,6 @@ const testExercise5 = () => {
 
     console.log(strivify("Strive"             )); //=> Strive
     console.log(strivify("Strive "            )); //!=> Strive -- trim or not to trim! This is the question!
-    console.log(strivify("Strive something"   )); //=> Strive something
     console.log(strivify("I will Strive"      )); //=> I will Strive
     console.log(strivify("Can I Strive later?")); //=> Can I Strive later?
 }
@@ -141,17 +140,17 @@ const testExercise7 = () => {
     Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
-// const upperFirst = ( string ) => {
-//     words = string.split(" ");
-//     console.log(words);
-//     newWords = words.map( word => word[0].toUpperCase() +  word.substring(1))
-//     words.join(" ");
-//     return words
-// }
-// const testExercise8 = () => {
+const upperFirst = ( string ) => {
+    words = string.split(" ");
+    console.log(words);
+    newWords = words.map( word => word[0].toUpperCase() +  word.substring(1))
+    newWords.join(" ");
+    return newWords
+}
+const testExercise8 = () => {
 
-//     console.log(upperFirst('Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.')); //=>
-// }
+    console.log(upperFirst('Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.')); //=>
+}
 
 
 /* EXERCISE 9
@@ -175,15 +174,17 @@ const testExercise9 = () => {
 
 const giveMeRandom = num => {
     
-    if (num < 1)
-        return "Please, introduce a positive number"
+    if (num < 1 || num > 10)
+        return "Please, introduce a number between 0 - 10"
 
-    let randomNum=""
+    let randomNum= []
     for (let i = 0; i < num; i++)
-        randomNum += Math.floor(Math.random() *  10)
+        randomNum.push(Math.floor(Math.random() *  10))
+        randomNum.join('')
 
     return randomNum;
 }
+
 const testExercise10 = () => {
     
     console.log(giveMeRandom(-1));         //=> Please, introduce a positive number
@@ -194,9 +195,6 @@ const testExercise10 = () => {
     console.log(giveMeRandom(433));        //=> 433 digits - tested lower
     // console.log(giveMeRandom(5432424253)); //=> This is going to brake the bash, kind of... 
     
-    // check if are 433
-    const test = "0239559249318038997129567818530834400868815620718942391982329915160955352373736501280073412103998332185007526280854150843361423209701943379022705890356560282931081158590598815628958536377417592655081308080275946273179093387200027377175838976177861338573867344053870867319958635779924271599254661219271941433392466834524286787078853414291453731188268248456873117307080812558187469991040262090054142100849695212294987099993296039360019"
-    console.log(test.length);
 }
 
 const testAllExercise = () => {
