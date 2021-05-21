@@ -100,26 +100,41 @@ const testExercise5 = () => {
     console.log(strivify("Can I Strive later?")); //=> Can I Strive later?
 }
 
+/* EXERCISE 6
+    Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
+    HINT: Module Operator
+*/
+
+const check3and7 = num => num > 0 && num%3 === 0 || num%7 === 0 ? true : false
+
+const testExercise6 = () => {
+
+    console.log(check3and7(-1)); //=> false
+    console.log(check3and7(0 )); //! => true
+    console.log(check3and7(1 )); //=> false
+    console.log(check3and7(3 )); //=> true
+    console.log(check3and7(5 )); //=> false
+    console.log(check3and7(7 )); //=> true
+    console.log(check3and7(10)); //=> false
+    console.log(check3and7(14)); //=> true
+    console.log(check3and7(21)); //=> true
+    console.log(check3and7(20)); //=> false
+    console.log(check3and7(42)); //=> true
+}
+
 const testAllExercise = () => {
 
     // testExercise1()
     // testExercise2()
     // testExercise3()
     // testExercise4()
-    testExercise5()
-    // testExercise6()
+    // testExercise5()
+    testExercise6()
     // testExercise7()
     // testExercise8()
     // testExercise9()
     // testExercise10()
 };testAllExercise()
-
-/* EXERCISE 6
-    Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
-    HINT: Module Operator
-*/
-
-
 
 /* EXERCISE 7
     Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
