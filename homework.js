@@ -18,6 +18,21 @@ console.log(rectArea(2,3));
     Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
 
+const crazySum = ( num1, num2 ) => (
+    !Number.isInteger(num1) || 
+    !Number.isInteger(num2) 
+        ? "You need to input integer numbers?" 
+        : num1 === num2 
+            ? (num1 + num2) * 3 
+            : (num1 + num2) 
+)
+
+
+console.log(crazySum("2", 4));
+console.log(crazySum(2  , 4));
+console.log(crazySum(4  , 4));
+console.log(crazySum(2  , 2));
+
 
 /* EXERCISE 3
     Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
