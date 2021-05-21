@@ -35,24 +35,38 @@ const testExercise2 = () => {
     console.log(crazySum(4  , 4));
     console.log(crazySum(2  , 2));
 }
+// const crazyDiff = num => Math.abs( num - 19) 
 
 /* EXERCISE 3
-    Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
+    Write a function "crazyDiff" that computes the absolute difference between a given number and 19.
+    It should return triple their absolute difference if the given number is greater than 19.
 */
 
-const crazyDiff = num => Math.abs( num - 19) 
+
+const crazyDiff = number => {
+
+    let diference = Math.abs(number) - 19
+
+    return diference > 19 
+            ? diference * 3 
+            : diference 
+}
 
 const testExercise3 = () => {
 
-    console.log(crazyDiff(-19));
-    console.log(crazyDiff(-1));
-    console.log(crazyDiff(0));
-    console.log(crazyDiff(4));
-    console.log(crazyDiff(18));
-    console.log(crazyDiff(19));
-    console.log(crazyDiff(20));
-    console.log(crazyDiff(343));
+    console.log(crazyDiff(-19)); // => 0
+    console.log(crazyDiff(-1));  // => -18
+    console.log(crazyDiff(0));   // => -19
+    console.log(crazyDiff(4));   // => -15
+    console.log(crazyDiff(18));  // => -1
+    console.log(crazyDiff(19));  // => 0
+    console.log(crazyDiff(37));  // => 18
+    console.log(crazyDiff(38));  // => 19
+    console.log(crazyDiff(39));  // => 60
+    console.log(crazyDiff(40));  // => 63
+    console.log(crazyDiff(100)); // => 243
 }
+testExercise3()
 
 /* EXERCISE 4
     Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
@@ -140,13 +154,6 @@ const testExercise7 = () => {
     Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
-const upperFirst = ( string ) => {
-    words = string.split(" ");
-    console.log(words);
-    newWords = words.map( word => word[0].toUpperCase() +  word.substring(1))
-    newWords.join(" ");
-    return newWords
-}
 const testExercise8 = () => {
 
     console.log(upperFirst('Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.')); //=>
@@ -164,8 +171,6 @@ const testExercise9 = () => {
 
     console.log(cutString('Write')); //=> rit
 }
-
-
 
 /* EXERCISE 10
     Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
@@ -208,7 +213,7 @@ const testAllExercise = () => {
     // testExercise7()
     // testExercise8()
     // testExercise9()
-    testExercise10()
+    // testExercise10()
 };
 testAllExercise()
 
