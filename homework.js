@@ -89,7 +89,30 @@ const testExercise4 = () => {
     It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
+const strivify = string =>  string.trim(string.includes("Strive", 0)) ? string : "Strive" + string
 
+const testExercise5 = () => {
+
+    console.log(strivify("Strive"             )); //=> Strive
+    console.log(strivify("Strive "            )); //!=> Strive -- trim or not to trim! This is the question!
+    console.log(strivify("Strive something"   )); //=> Strive something
+    console.log(strivify("I will Strive"      )); //=> I will Strive
+    console.log(strivify("Can I Strive later?")); //=> Can I Strive later?
+}
+
+const testAllExercise = () => {
+
+    // testExercise1()
+    // testExercise2()
+    // testExercise3()
+    // testExercise4()
+    testExercise5()
+    // testExercise6()
+    // testExercise7()
+    // testExercise8()
+    // testExercise9()
+    // testExercise10()
+};testAllExercise()
 
 /* EXERCISE 6
     Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
