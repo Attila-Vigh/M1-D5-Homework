@@ -122,35 +122,49 @@ const testExercise6 = () => {
     console.log(check3and7(42)); //=> true
 }
 
-const testAllExercise = () => {
-
-    // testExercise1()
-    // testExercise2()
-    // testExercise3()
-    // testExercise4()
-    // testExercise5()
-    testExercise6()
-    // testExercise7()
-    // testExercise8()
-    // testExercise9()
-    // testExercise10()
-};testAllExercise()
 
 /* EXERCISE 7
     Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
 
+const reverseString = string => string.split("").reverse().join("");
 
+const testExercise7 = () => {
+
+    console.log(reverseString("Strive"          )); //=>evirtS
+    console.log(reverseString("School"          )); //=>loohcS
+    console.log(reverseString("sdr45643r  fwfsg")); //=>gsfwf  r34654rds
+    console.log(reverseString("54sf)**(YFNK"    )); //=>KNFY(**)fs45
+}
 
 /* EXERCISE 8
     Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
+// const upperFirst = ( string ) => {
+//     words = string.split(" ");
+//     console.log(words);
+//     newWords = words.map( word => word[0].toUpperCase() +  word.substring(1))
+//     words.join(" ");
+//     return words
+// }
+// const testExercise8 = () => {
+
+//     console.log(upperFirst('Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.')); //=>
+// }
 
 
 /* EXERCISE 9
     Write a function "cutString" to create a new string without the first and last character of a given string.
 */
+
+const cutString = string => string.slice(1, string.length-1);
+
+
+const testExercise9 = () => {
+
+    console.log(cutString('Write')); //=> rit
+}
 
 
 
@@ -158,6 +172,27 @@ const testAllExercise = () => {
     Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
+// const giveMeRandom = num => num;
+
+
+// const testExercise10 = () => {
+
+//     console.log(giveMeRandom('Write')); //=> rit
+// }
+
+// const testAllExercise = () => {
+
+//     // testExercise1()
+//     // testExercise2()
+//     // testExercise3()
+//     // testExercise4()
+//     // testExercise5()
+//     // testExercise6()
+//     // testExercise7()
+//     // testExercise8()
+//     // testExercise9()
+//     testExercise10()
+// };testAllExercise()
 
 
 /* WHEN YOU ARE FINISHED
