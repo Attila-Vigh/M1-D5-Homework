@@ -161,11 +161,27 @@ const upperFirst = ( string ) => {
      * 1. get the words one by one form the array 
      * 2. this the help of the index i parameter the word is grabbed form the array redeclared 
      * 3. by adding the first letter capitalized of the word current word 
-     * 3. the same word starting from the scond letter 
+     * 4. the same word starting from the scond letter 
      */
     words.forEach(( word, i ) => words[i] = word[0].toUpperCase() + word.slice(1))
     
-    string = words.join(" "); // the array is tranformed into a string wiht space between words
+    string = words.join(" ");       // the array is tranformed into a string wiht space between words  by redeclaring string
+
+    return string
+}
+const upperFirstVariant = ( string ) => {
+    
+    const words = string.split(" "); // split the string into an array
+    /**
+     * 1. get the words one by one form the array 
+     * 2. this the help of the index i parameter the word is grabbed form the array redeclared 
+     * 3. by adding the first letter capitalized of the word current word 
+     * 4. the same word starting from the scond letter 
+     * 5. add the curent word intro new array
+     */
+    newWords = words.map(( word, i ) => words[i] = word[0].toUpperCase() + word.slice(1))
+    
+    string = newWords.join(" ");    // the new array is tranformed into a string wiht space between words by redeclaring string
 
     return string
 }
@@ -173,6 +189,7 @@ const upperFirst = ( string ) => {
 const testExercise8 = () => {
 
     console.log(upperFirst('Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.')); //=>
+    console.log(upperFirstVariant('Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.')); //=>
 }
 
 
