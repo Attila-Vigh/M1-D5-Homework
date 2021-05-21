@@ -12,8 +12,9 @@ ASSIGNMENT RULES
 
 const rectArea = ( width, height ) => width * height;
 
-console.log(rectArea(2,3));
-
+const testExercise1 = () => {
+    console.log(rectArea(2,3));
+}
 /* EXERCISE 2
     Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
@@ -27,16 +28,45 @@ const crazySum = ( num1, num2 ) => (
             : (num1 + num2) 
 )
 
+const testExercise2 = () => {
 
-console.log(crazySum("2", 4));
-console.log(crazySum(2  , 4));
-console.log(crazySum(4  , 4));
-console.log(crazySum(2  , 2));
-
+    console.log(crazySum("2", 4));
+    console.log(crazySum(2  , 4));
+    console.log(crazySum(4  , 4));
+    console.log(crazySum(2  , 2));
+}
 
 /* EXERCISE 3
     Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
 */
+
+const crazyDiff = num => Math.abs( num - 19) 
+
+const testExercise3 = () => {
+
+    console.log(crazyDiff(-19));
+    console.log(crazyDiff(-1));
+    console.log(crazyDiff(0));
+    console.log(crazyDiff(4));
+    console.log(crazyDiff(18));
+    console.log(crazyDiff(19));
+    console.log(crazyDiff(20));
+    console.log(crazyDiff(343));
+}
+
+const testAllExercise = () => {
+
+    // testExercise1()
+    // testExercise2()
+    testExercise3()
+    // testExercise4()
+    // testExercise5()
+    // testExercise6()
+    // testExercise7()
+    // testExercise8()
+    // testExercise9()
+    // testExercise10()
+};testAllExercise()
 
 /* EXERCISE 4
     Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
