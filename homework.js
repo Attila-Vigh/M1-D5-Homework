@@ -186,6 +186,25 @@ const upperFirstVariant = ( string ) => {
     return string
 }
 
+const upperForVariant = ( string ) => {
+    let words = string.split(" ");
+    string = [];
+    for (let word of words) 
+        string.push(word[0].toUpperCase() + word.slice(1))
+    return string.join(" ")
+}
+console.log(upperForVariant("this is a test for exercise"))
+
+function upperFirstUddinVariant(string){ // variable borrowed from Muslim Uddin Arju for learning 
+    let separateWord = string.toLowerCase().split(' ');
+    for (let i = 0; i < separateWord.length; i++) {
+        separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
+        separateWord[i].substring(1);
+    }
+    return separateWord.join(' ');
+}
+// console.log(upperFirstUddinVariant("this is a test for exercise"))
+
 const testExercise8 = () => {
 
     console.log(upperFirst('Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.')); //=>
@@ -248,7 +267,7 @@ const testAllExercise = () => {
     // testExercise9()
     // testExercise10()
 };
-testAllExercise()
+// testAllExercise()
 
 
 /* WHEN YOU ARE FINISHED
